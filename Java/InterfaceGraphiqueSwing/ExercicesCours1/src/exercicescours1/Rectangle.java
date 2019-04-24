@@ -23,7 +23,7 @@ public class Rectangle extends JFrame{
         setSize(900,300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
+        //mon Panel
         JPanel mesDimensions = new JPanel();
         mesDimensions.setLocale(null);
         
