@@ -27,13 +27,15 @@ public class Rectangle extends JFrame{
         mesDimensions.setLocale(null);
         
         JLabel longueur = new JLabel("Longueur: ");        
-        JTextField inputLongueur= new JTextField("   0");
-        JLabel largeur = new JLabel("Largeur");
+        JTextField inputLongueur= new JTextField("0",5);
+        inputLongueur.setHorizontalAlignment(JTextField.RIGHT);
+        
+        JLabel largeur = new JLabel("Largeur: ");
         JTextField inputLargeur = new JTextField("   0");
         JButton calculer = new JButton("Calculer");
-        JLabel perimetre = new JLabel("Perimetre");
+        JLabel perimetre = new JLabel("Perimetre: ");
         JTextField monPerimetre = new JTextField("    0");
-        JLabel surface = new JLabel("Surface");
+        JLabel surface = new JLabel("Surface: ");
         JTextField maSurface = new JTextField("    0");
               
         
