@@ -18,9 +18,9 @@ import javax.swing.JPanel;
  *
  * @author mk
  */
-public class Imprimer123 extends JFrame {
+public class ImprimerOK extends JFrame {
     
-    public Imprimer123(){
+    public ImprimerOK(){
         
         super("Imprimer");
         
@@ -62,7 +62,7 @@ public class Imprimer123 extends JFrame {
     
     public static void main(String[] args) {
         
-        new Imprimer123().setVisible(true);
+        new ImprimerOK().setVisible(true);
         
     }
 
