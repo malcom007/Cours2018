@@ -5,6 +5,8 @@
  */
 package exercicescours1;
 
+import java.awt.Component;
+import java.awt.font.GlyphMetrics;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,21 +21,28 @@ public class Imprimer extends JFrame{
         
         super("Imprimer");
         
+        
         setLocation(300,300);        
         setSize(600,300);        
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
         
         JPanel monPanel = new JPanel();        
         monPanel.setLayout(null);
         
         JButton imprimer = new JButton("Imprimer");
+        imprimer.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         monPanel.add(imprimer);
         
         imprimer.setBounds(150, 15, 100, 30);
         
+        //permet d'empecher l'agrandissement
+        super.setResizable(false);
+        
         getContentPane().add(monPanel);
+        
+        
     }
     
     public static void main(String[] args) {

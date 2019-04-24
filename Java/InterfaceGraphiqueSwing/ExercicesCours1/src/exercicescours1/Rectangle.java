@@ -5,6 +5,7 @@
  */
 package exercicescours1;
 
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -29,19 +30,19 @@ public class Rectangle extends JFrame{
         JLabel longueur = new JLabel("Longueur: ");        
         JTextField inputLongueur= new JTextField("0",5);
         inputLongueur.setHorizontalAlignment(JTextField.RIGHT);
-        
+        //
         JLabel largeur = new JLabel("Largeur: ");
-        JTextField inputLargeur = new JTextField("0");
+        JTextField inputLargeur = new JTextField("0",5);
         inputLargeur.setHorizontalAlignment(JTextField.RIGHT);
         
         JButton calculer = new JButton("Calculer");
-        
+                
         JLabel perimetre = new JLabel("Perimetre: ");
         JTextField monPerimetre = new JTextField("0",5);
         monPerimetre.setHorizontalAlignment(JTextField.RIGHT);
         
         JLabel surface = new JLabel("Surface: ");
-        JTextField maSurface = new JTextField("    0");
+        JTextField maSurface = new JTextField("0",5);
         maSurface.setHorizontalAlignment(JTextField.RIGHT);
               
         
