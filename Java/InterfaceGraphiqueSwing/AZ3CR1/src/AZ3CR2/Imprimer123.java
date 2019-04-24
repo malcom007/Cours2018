@@ -18,9 +18,9 @@ import javax.swing.JPanel;
  *
  * @author mk
  */
-public class Imprimer extends JFrame implements ActionListener{
+public class Imprimer123 extends JFrame {
     
-    public Imprimer(){
+    public Imprimer123(){
         
         super("Imprimer");
         
@@ -45,24 +45,28 @@ public class Imprimer extends JFrame implements ActionListener{
         
         getContentPane().add(monPanel);
         
-        //Ici on ajoute l'action pour 
-        imprimer.addActionListener(this);
+        /*
+        * Pour chaque bouton on lui crée un objet anonyme
+        * Ici on ajoute l'action pour bouton
+        * On lui donne comme parametre l'object */
+        imprimer.addActionListener(new ActionListener() {
+            //On lui met une methode pour réagir
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(imprimer, "Impression Impossible"); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
         
         
     }
     
     public static void main(String[] args) {
         
-        new Imprimer().setVisible(true);
+        new Imprimer123().setVisible(true);
         
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println(e.getSource());
-        //Permet d'afficher une boite de dialogue avec message
-        JOptionPane.showMessageDialog(this, "Impression Impossible");
-    }
+
     
     
     
