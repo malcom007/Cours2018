@@ -6,16 +6,19 @@
 package AZ3CR2;
 
 import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.font.GlyphMetrics;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
  *
  * @author mk
  */
-public class Imprimer extends JFrame{
+public class Imprimer extends JFrame implements ActionListener{
     
     public Imprimer(){
         
@@ -42,6 +45,9 @@ public class Imprimer extends JFrame{
         
         getContentPane().add(monPanel);
         
+        //Ici on ajoute l'action pour 
+        imprimer.addActionListener(this);
+        
         
     }
     
@@ -49,6 +55,12 @@ public class Imprimer extends JFrame{
         
         new Imprimer().setVisible(true);
         
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //Permet d'afficher une boite de dialogue avec message
+        JOptionPane.showMessageDialog(this, "Impression Impossible");
     }
     
     
