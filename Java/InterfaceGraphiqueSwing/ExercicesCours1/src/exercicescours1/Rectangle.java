@@ -31,12 +31,18 @@ public class Rectangle extends JFrame{
         inputLongueur.setHorizontalAlignment(JTextField.RIGHT);
         
         JLabel largeur = new JLabel("Largeur: ");
-        JTextField inputLargeur = new JTextField("   0");
+        JTextField inputLargeur = new JTextField("0");
+        inputLargeur.setHorizontalAlignment(JTextField.RIGHT);
+        
         JButton calculer = new JButton("Calculer");
+        
         JLabel perimetre = new JLabel("Perimetre: ");
-        JTextField monPerimetre = new JTextField("    0");
+        JTextField monPerimetre = new JTextField("0",5);
+        monPerimetre.setHorizontalAlignment(JTextField.RIGHT);
+        
         JLabel surface = new JLabel("Surface: ");
         JTextField maSurface = new JTextField("    0");
+        maSurface.setHorizontalAlignment(JTextField.RIGHT);
               
         
         mesDimensions.add(longueur);
