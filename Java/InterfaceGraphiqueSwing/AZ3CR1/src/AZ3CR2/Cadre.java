@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 public class Cadre extends JFrame{
     
     public Cadre(){
-        super("Test du Cadre");
+        super("Test du Cadre m");
         
         setSize(600, 300);
         setLocationRelativeTo(null);
