@@ -9,6 +9,49 @@ package exempleversion;
  *
  * @author mk
  */
-public class CompteEpargne {
+public class CompteEpargne extends CompteBancaire{
+    
+    private double tauxInteret;
+    
+    private static int countEpargne;
+    //Constructeur d'initialisation
+    public CompteEpargne(){
+        
+    }
+    
+    //Constructeur d'instanciation
+
+    public CompteEpargne(String titulaire, double solde, double tauxInteret) {
+        super(titulaire, solde);
+        countEpargne++;
+        this.tauxInteret = tauxInteret;
+    }
+    
+    
+    //Les ascesseurs
+    public double getTauxInteret() {
+        return tauxInteret;
+    }
+
+    public void setTauxInteret(double tauxInteret) {
+        this.tauxInteret = tauxInteret;
+    }
+
+    public static int getCountEpargne() {
+        return countEpargne;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"\t"+tauxInteret;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
