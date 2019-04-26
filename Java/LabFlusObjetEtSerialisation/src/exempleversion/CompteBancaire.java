@@ -5,15 +5,15 @@
  */
 package exempleversion;
 
-import java.io.Serializable;
+
 
 /**
  * Compte pour les diff comptes
  * @author mk
  */
-public class CompteBancaire implements Serializable{
+public class CompteBancaire {
 
-    private static final long serialVersionUID = 1L;
+    
     
     private String titulaire, devise;
     private double solde;
