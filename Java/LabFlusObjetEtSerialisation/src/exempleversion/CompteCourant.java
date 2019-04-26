@@ -21,10 +21,10 @@ public class CompteCourant extends CompteBancaire{
         
     }
 
-    public CompteCourant(String titulaire, double solde, double decouvertMaxi) {
-        super(titulaire, solde);
+    public CompteCourant(String titulaire, double solde,String devise, String numeroCB, double decouvertMaxi) {
+        super(titulaire, solde, devise);
         countCourant++;
-        this.numeroCB = "2019"+countCourant;
+        this.numeroCB = numeroCB;
         this.decouvertMaxi = decouvertMaxi;
     }
 

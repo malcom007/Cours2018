@@ -27,10 +27,10 @@ public class CompteBancaire implements Serializable{
         
     }
     //Constructeur d'instanciation
-    public CompteBancaire(String titulaire, double solde) {
+    public CompteBancaire(String titulaire, double solde, String devise) {
         count++;
         this.titulaire = titulaire;
-        this.devise = "$";
+        this.devise = devise;
         this.solde = solde;
     }
 
@@ -64,7 +64,7 @@ public class CompteBancaire implements Serializable{
 
     @Override
     public String toString() {
-        return "\t"+titulaire+" \t"+solde+" \t"+devise;
+        return "\t"+titulaire+" \t"+solde+devise;
     }
 
     

@@ -21,8 +21,8 @@ public class CompteEpargne extends CompteBancaire{
     
     //Constructeur d'instanciation
 
-    public CompteEpargne(String titulaire, double solde, double tauxInteret) {
-        super(titulaire, solde);
+    public CompteEpargne(String titulaire, double solde, String devise,double tauxInteret) {
+        super(titulaire, solde, devise);
         countEpargne++;
         this.tauxInteret = tauxInteret;
     }
