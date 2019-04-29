@@ -37,6 +37,7 @@ public class DJfmImpression extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(300, 300, 600, 300));
         setLocation(new java.awt.Point(300, 300));
         setMinimumSize(new java.awt.Dimension(600, 300));
+        setPreferredSize(new java.awt.Dimension(600, 300));
         setSize(new java.awt.Dimension(600, 300));
 
         jPanel1.setName("monJPanel"); // NOI18N

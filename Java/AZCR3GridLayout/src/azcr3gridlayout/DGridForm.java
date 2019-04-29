@@ -36,8 +36,11 @@ public class DGridForm extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Demo Grid Layout with Designer");
         setBounds(new java.awt.Rectangle(300, 300, 600, 300));
+        setPreferredSize(new java.awt.Dimension(600, 300));
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
         jPanel1.setLayout(new java.awt.GridLayout(2, 3, 30, 60));
 
         jButton1.setText("btn1");
@@ -51,7 +54,7 @@ public class DGridForm extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
 
-        jButton3.setText("btn3");
+        jButton3.setText("Bt 3 33333333333333333333335444555455");
         jPanel1.add(jButton3);
 
         jButton4.setText("btn4");
@@ -85,7 +88,7 @@ public class DGridForm extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Metal".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

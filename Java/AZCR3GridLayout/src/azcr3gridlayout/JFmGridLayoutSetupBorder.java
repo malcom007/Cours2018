@@ -41,6 +41,7 @@ public class JFmGridLayoutSetupBorder extends JFrame
         btn6= new JButton("Bt 6");
         
         monJPanel = new JPanel();
+        
         monJPanel.setBackground(Color.ORANGE);
         
         //Pour ne pas coller le panneau sur le Frame
