@@ -58,6 +58,7 @@ public class DJfmImpression extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //Permet d'afficher une boite de dialogue avec message
         JOptionPane.showMessageDialog(this.jButton1, "Impression Impossible");
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
