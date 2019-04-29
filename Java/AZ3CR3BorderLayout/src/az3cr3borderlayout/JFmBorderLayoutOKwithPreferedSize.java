@@ -7,24 +7,26 @@ package az3cr3borderlayout;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 
 /**
  *
  * @author mk
  */
-public class JFmBorderLayout extends JFrame       
+public class JFmBorderLayoutOKwithPreferedSize extends JFrame       
        
 {
 
     private static final long serialVersionUID = 1L;
     JButton btn1, btn2, btn3, btn4, btn5, btn6;
-   
+    JPanel monJPanel,monJPanelEast;
             
     
-    public JFmBorderLayout(){
+    public JFmBorderLayoutOKwithPreferedSize(){
         
         setTitle("Demo FLow Layot");
         setBounds(300,300,600,300);
@@ -37,18 +39,31 @@ public class JFmBorderLayout extends JFrame
         btn5= new JButton("Bt 5");
         btn6= new JButton("Bt 6");
         
+        monJPanelEast=new JPanel();
+        monJPanelEast.add(btn5);
+        monJPanel = new JPanel();
+        monJPanel.setBackground(Color.ORANGE);
+        
+        monJPanel.add(btn3);
+        monJPanel.add(btn6);
+        
+        //afin de forcer une colonne de deux boutons
+        monJPanelEast.setPreferredSize(new Dimension(70,70));
+        
         getContentPane().add(btn1,BorderLayout.WEST);
         getContentPane().add(btn2,BorderLayout.NORTH);
-        getContentPane().add(btn3,BorderLayout.CENTER);
-        
+        getContentPane().add(monJPanelEast,BorderLayout.EAST);
         getContentPane().add(btn4,BorderLayout.SOUTH);
-        getContentPane().add(btn5,BorderLayout.EAST);
+        
+        //le panel monJPanel contient deux composants
+        //monJPanel est consideré par ContentPane comme un seul composant
+        getContentPane().add(monJPanel,BorderLayout.CENTER);
         
        
                 }
     
     public static void main(String[] args) {
-        new JFmBorderLayout().setVisible(true);
+        new JFmBorderLayoutOKwithPreferedSize().setVisible(true);
     }
     
 }
