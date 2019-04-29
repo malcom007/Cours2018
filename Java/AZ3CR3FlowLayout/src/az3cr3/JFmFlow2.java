@@ -41,7 +41,7 @@ public class JFmFlow2 extends JFrame
         
         //Ici on change l'alignement de centré vers la droite
         //le 50 marge droit et 100 marge bas
-        monJPanel.setLayout(new FlowLayout(FlowLayout.RIGHT,50,75));
+        monJPanel.setLayout(new FlowLayout(FlowLayout.LEFT,30,75));
         
         monJPanel.add(btn1);
         monJPanel.add(btn2);
