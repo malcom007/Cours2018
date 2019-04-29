@@ -24,6 +24,7 @@ public class JFmFlow extends JFrame
         
         setTitle("Demo FLow Layot");
         setBounds(300,300,600,300);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
         btn1= new JButton("Bt 1");
         btn2= new JButton("Bt 2");
