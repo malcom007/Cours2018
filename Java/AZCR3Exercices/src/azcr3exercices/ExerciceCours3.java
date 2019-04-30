@@ -89,11 +89,16 @@ public class ExerciceCours3 extends JFrame{
         centerPanel.setBackground(Color.ORANGE);
         //on ajoute un padding
         centerPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-        centerPanel.setLayout(new GridLayout(9,1,5,5));
+        centerPanel.setLayout(new GridLayout(7,1,5,5));
         
-        JPanel sexePanel = new JPanel();
+        JPanel sexePanel = new JPanel();        
+        sexePanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        sexePanel.setBackground(Color.ORANGE);
+        //
+        sexePanel.add(sexe);
+        sexePanel.add(sexeF);
+        sexePanel.add(sexeH);
         
-        sexePanel.setLayout(new FlowLayout());
         
         //On ajoute les element a ce panel
         centerPanel.add(nom);
@@ -102,13 +107,9 @@ public class ExerciceCours3 extends JFrame{
         centerPanel.add(inputPrenom);
         centerPanel.add(adresse);
         centerPanel.add(inputAdresse);
-        sexePanel.add(sexe);
-        sexePanel.add(sexeF);
-        sexePanel.add(sexeH);
+        
         centerPanel.add(sexePanel);
-//        centerPanel.add(sexe);
-//        centerPanel.add(sexeF);
-//        centerPanel.add(sexeH);
+
         
         
         
