@@ -28,7 +28,7 @@ public class JFmBorderLayoutOKwithPreferedSize extends JFrame
     
     public JFmBorderLayoutOKwithPreferedSize(){
         
-        setTitle("Demo FLow Layot");
+        setTitle("Demo FLow Layot with PreferedSize");
         setBounds(300,300,600,300);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         

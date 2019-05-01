@@ -8,9 +8,11 @@ package azcr3exercices;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -31,21 +33,24 @@ public class ExerciceCours3 extends JFrame{
     public ExerciceCours3(String monTitre){
         setTitle(monTitre);
         //Taille de mon frame
-        setSize(700,400);
+        setSize(350,400);
         //On centre la fênetre
         setLocationRelativeTo(null);
         //On tue la tâche a la fermeture 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
-        JLabel nom = new JLabel("Nom");
-        
+        JLabel nom = new JLabel("Nom");        
         JTextField inputNom = new JTextField();
-        
+                
         JLabel prenom = new JLabel("Prenom");
         JTextField inputPrenom = new JTextField();
         
         JLabel adresse = new JLabel("Adresse");        
         JTextArea inputAdresse = new JTextArea();
+        
+        
+        
+        
         
         JLabel sexe = new JLabel("Sexe");
         //Création button Radion
@@ -75,8 +80,8 @@ public class ExerciceCours3 extends JFrame{
         
         //On crée un Conteneur Main
         Container principalMain = new Container();
-        principalMain.setLayout(new BorderLayout(8,6));
-        principalMain.setBackground(Color.ORANGE);
+        principalMain.setLayout(new BorderLayout(5,5));
+        principalMain.setBackground(Color.RED);                
         //on definit la couleur des bordures
         this.getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.GREEN));
         
@@ -90,6 +95,7 @@ public class ExerciceCours3 extends JFrame{
         //on ajoute un padding
         centerPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
         centerPanel.setLayout(new GridLayout(7,1,5,5));
+        
         
         JPanel sexePanel = new JPanel();        
         sexePanel.setLayout(new FlowLayout(FlowLayout.LEFT));
