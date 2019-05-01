@@ -5,6 +5,14 @@
  */
 package labcours4collections;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.Buffer;
+
 /**
  *
  * @author mk
@@ -17,8 +25,21 @@ public class LabCours4Collections {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws IOException {
+        //Variable d'entrée
+        BufferedReader maSource = null;
+        //Variable de sortie
+        PrintWriter maDestination= null;
+        String line;
+        
+        try {
+            maSource
+            
+        } catch (Exception e) {
+        }
+        
+        
+        
     }
     
 }

@@ -46,7 +46,7 @@ public class ExerciceCours3 extends JFrame{
         JTextField inputPrenom = new JTextField();
         
         JLabel adresse = new JLabel("Adresse");        
-        JTextArea inputAdresse = new JTextArea("", 1, 15);
+        JTextArea inputAdresse = new JTextArea();
         
         
         
@@ -96,24 +96,14 @@ public class ExerciceCours3 extends JFrame{
         centerPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
         centerPanel.setLayout(new GridLayout(7,1,5,5));
         
-        JPanel monAdJPanel = new JPanel();
-        
-        monAdJPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        monAdJPanel.setPreferredSize(new Dimension(100, 150));
-        monAdJPanel.add(adresse);
-        monAdJPanel.add(inputAdresse);
-        
         
         JPanel sexePanel = new JPanel();        
         sexePanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         sexePanel.setBackground(Color.ORANGE);
         //
-        
-        
         sexePanel.add(sexe);
         sexePanel.add(sexeF);
         sexePanel.add(sexeH);
-        
         
         
         //On ajoute les element a ce panel
@@ -121,10 +111,9 @@ public class ExerciceCours3 extends JFrame{
         centerPanel.add(inputNom);
         centerPanel.add(prenom);
         centerPanel.add(inputPrenom);
-        //centerPanel.add(adresse);
-        //centerPanel.add(inputAdresse);
+        centerPanel.add(adresse);
+        centerPanel.add(inputAdresse);
         
-        centerPanel.add(monAdJPanel);
         centerPanel.add(sexePanel);
 
         
