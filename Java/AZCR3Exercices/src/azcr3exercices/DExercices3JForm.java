@@ -71,6 +71,7 @@ public class DExercices3JForm extends javax.swing.JFrame {
         CentreNord.add(nom);
 
         inputNom.setToolTipText("");
+        inputNom.setEnabled(false);
         inputNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputNomActionPerformed(evt);

@@ -8,6 +8,7 @@ package azcr3exercices;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 
 
 
@@ -43,10 +44,30 @@ public class Calculatrice extends JFrame{
                 -----------------------------------
         */ 
         mainPanel = new JPanel();
-        mainPanel.setLayout(new BorderLayout());
-        mainPanel.setBackground(Color.red);
+        mainPanel.setLayout(new BorderLayout(5,5));
+        mainPanel.setBackground(Color.CYAN);
+        //création bordure autour de notre main avec 4px d'épaisseur
+        this.getRootPane().setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.CYAN));
+        
+        /*      ---------------------------------
+                Création des Pannels de division
+                ---------------------------------
+        */
+        nordPanel = new JPanel();
+        nordPanel.setBackground(Color.red);
+        nordPanel.setBorder(new LineBorder(Color.BLACK,2));
+        //Le borderLayout prend tout le bord
+        nordPanel.setLayout(new BorderLayout(2,2));
+        
+        resultTxtField= new JTextField();
+        resultTxtField.setEnabled(false);
+        nordPanel.add(resultTxtField);
+        mainPanel.add(nordPanel, BorderLayout.NORTH);
         
         
+        
+        
+        getContentPane().add(mainPanel);
         
     }
     
