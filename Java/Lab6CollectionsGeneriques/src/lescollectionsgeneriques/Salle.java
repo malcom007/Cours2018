@@ -13,7 +13,7 @@ public class Salle {
     
     private int id;
     private String code, libelle;
-    private int countS;
+    private static int countS;
     
     //COnstructeurs
     public Salle(){
@@ -21,7 +21,8 @@ public class Salle {
     }
 
     public Salle(String code, String libelle) {
-        this.id=countS++;
+        
+        this.id=++countS;
         this.code = code;
         this.libelle = libelle;
     }
@@ -58,7 +59,7 @@ public class Salle {
 
     @Override
     public String toString() {
-        return "Salle " + "id=" + id + "\t code=" + code + "\t libelle=" + libelle + '}';
+        return id+"      \t"+code+"\t"+libelle;
     }
     
     
