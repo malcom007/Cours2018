@@ -61,8 +61,9 @@ public class LesCollectionsGeneriques {
         System.out.println("Donner le nouveau libelle: ");
         salleToModify.setLibelle(input.nextLine());
         
-        ss.update(salleToModify);
+        
         System.out.println("Liste des salles après MODIFICATION");
+        ss.update(salleToModify);
         System.out.println("===================================");
         System.out.println("");
         System.out.print("ID \tCODE \tLIBELE");

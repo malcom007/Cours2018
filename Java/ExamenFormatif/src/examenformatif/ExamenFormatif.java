@@ -20,26 +20,46 @@ public class ExamenFormatif {
 
         Scanner input = new Scanner(System.in);
 
-        try {
-            int f, result = 0;
+        //Exercice 1
+//        try {
+//            int f, result = 0;
+//
+//            System.out.println("Entrez un entier");
+//            f = input.nextInt();
+//
+//            if (f < 0) {
+//                throw new NullPointerException();
+//            }
+//
+//            
+//            System.out.println("la fibo (" + f + ") = " + fib(f));
+//        } catch (NullPointerException e) {
+//            System.out.println("");
+//            System.out.println("Donnez une valeur supérieur a 0");
+//        } catch (Exception e) {
+//            System.out.println("");
+//            System.out.println("Entrez chiffre seulement");
+//        }
 
-            System.out.println("Entrez un entier");
-            f = input.nextInt();
-
-            if (f < 0) {
-                throw new NullPointerException();
-            }
-
+//        Exercice 2
+          List<Integer> maListe = Arrays.asList(-3,8,1,5,8,4,-8,2,4,3);
+          List<Integer> liste = new ArrayList<>();
+          
+          int temp, count=0;
+          
+          Collection maCollection = maListe;
+          
+          while (maCollection.iterator().hasNext()==true) {
+              
+              System.out.println(maCollection);
             
-            System.out.println("la fibo (" + f + ") = " + fib(f));
-        } catch (NullPointerException e) {
-            System.out.println("");
-            System.out.println("Donnez une valeur supérieur a 0");
-        } catch (Exception e) {
-            System.out.println("");
-            System.out.println("Entrez chiffre seulement");
         }
-    }
+          System.out.println("");
+         }     
+            
+        
+          
+    
 
     private static int fib(int i) {
         {

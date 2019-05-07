@@ -48,7 +48,7 @@ public class JFmBorderLayoutOKwithPreferedSize extends JFrame
         monJPanel.add(btn6);
         
         //afin de forcer une colonne de deux boutons
-        monJPanelEast.setPreferredSize(new Dimension(70,70));
+        monJPanelEast.setPreferredSize(new Dimension(70,0));
         
         getContentPane().add(btn1,BorderLayout.WEST);
         getContentPane().add(btn2,BorderLayout.NORTH);

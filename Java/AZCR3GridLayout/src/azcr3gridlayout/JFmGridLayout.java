@@ -43,7 +43,7 @@ public class JFmGridLayout extends JFrame
         monJPanel.setBackground(Color.ORANGE);
         
         //Une grille de 2 lignes, separation de 3 colonnes gap horizontal 30, gap vertical de 60
-        monJPanel.setLayout(new GridLayout(2,3,30,60));
+        monJPanel.setLayout(new GridLayout(6,0,10,10));
         
         monJPanel.add(btn1);
         monJPanel.add(btn2);

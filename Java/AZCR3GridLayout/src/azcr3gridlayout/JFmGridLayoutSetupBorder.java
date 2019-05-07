@@ -48,14 +48,14 @@ public class JFmGridLayoutSetupBorder extends JFrame
         monJPanel.setBorder(new EmptyBorder(20,20,20,20));
         
         //Une grille de 2 lignes, separation de 3 colonnes gap horizontal 30, gap vertical de 60
-        monJPanel.setLayout(new GridLayout(2,3,30,60));
+        monJPanel.setLayout(new GridLayout(3,1,30,60));
         
         monJPanel.add(btn1);
         monJPanel.add(btn2);
-        monJPanel.add(btn3);
-        monJPanel.add(btn4);
-        monJPanel.add(btn5);
-        monJPanel.add(btn6);
+//        monJPanel.add(btn3);
+//        monJPanel.add(btn4);
+//        monJPanel.add(btn5);
+//        monJPanel.add(btn6);
                 
         
         
