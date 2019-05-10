@@ -98,12 +98,12 @@ public class BtnRadio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        Jlab1.setText("Vous avez selectionné: "+jRadioButton3.getText());
+        Jlab1.setText("Vous avez selectionné: "+jRadioButton4.getText());
         jRadioButton6.setSelected(true);
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        Jlab1.setText("Vous avez selectionné: "+jRadioButton4.getText());
+        Jlab1.setText("Vous avez selectionné: "+jRadioButton3.getText());
         jRadioButton5.setSelected(true);
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 

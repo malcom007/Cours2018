@@ -27,21 +27,84 @@ public class CheckBox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        JLabChoix = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(20, 20, 424, 300));
+        setMinimumSize(new java.awt.Dimension(424, 300));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        jPanel1.setAlignmentX(5.0F);
+        jPanel1.setAlignmentY(5.0F);
+        jPanel1.setBounds(new java.awt.Rectangle(15, 35, 100, 100));
+        jPanel1.setLayout(new java.awt.GridLayout(4, 1, 0, 5));
+
+        jCheckBox1.setText("jCheckBox1");
+        jCheckBox1.setActionCommand("jCkB1");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox1);
+
+        jCheckBox2.setText("jCheckBox2");
+        jCheckBox2.setActionCommand("jCkB2");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox2);
+
+        jCheckBox3.setText("jCheckBox3");
+        jCheckBox3.setActionCommand("jCkB3");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox3);
+
+        jCheckBox4.setText("jCheckBox4");
+        jCheckBox4.setActionCommand("jCkB4");
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox4);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
+        jPanel1.getAccessibleContext().setAccessibleName("");
+
+        JLabChoix.setText("Cochez vos sport");
+        JLabChoix.setToolTipText("");
+        getContentPane().add(JLabChoix, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        afficher();
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        afficher();
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        afficher();
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+        afficher();
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +142,37 @@ public class CheckBox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JLabChoix;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    private void afficher() {
+        String texte="";
+       
+        
+        if (jCheckBox1.isSelected()) {
+            texte=jCheckBox1.getText();
+        }
+        if (jCheckBox2.isSelected()) {
+            texte=texte+jCheckBox2.getText();
+        }
+        if (jCheckBox3.isSelected()) {
+            texte=texte+jCheckBox3.getText();
+        }
+        if (jCheckBox4.isSelected()) {
+            texte=texte+jCheckBox4.getText();
+        }
+        if (texte.isEmpty()) {
+            
+        }
+        if (texte.isEmpty()) {
+            JLabChoix.setText("Cochez vos sport");
+        }else
+            JLabChoix.setText("Vous avez choisi: "+texte);
+            
+    }
 }
