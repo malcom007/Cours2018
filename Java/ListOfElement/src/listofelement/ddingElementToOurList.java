@@ -9,12 +9,12 @@ package listofelement;
  *
  * @author mk
  */
-public class JFListe extends javax.swing.JFrame {
+public class ddingElementToOurList extends javax.swing.JFrame {
 
     /**
      * Creates new form JFListe
      */
-    public JFListe() {
+    public ddingElementToOurList() {
         initComponents();
         
         //On ajoute le ce code pour recuperer la valeur selectionné par default
@@ -38,7 +38,6 @@ public class JFListe extends javax.swing.JFrame {
         Ajouter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 400));
 
         MaListe.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "adresse1@hotmail.com", "adresse2@gmail.com", "adresse3@yahoo.com", "adresse4@caramail.com", "adresse5@mk.com" };
@@ -105,20 +104,21 @@ public class JFListe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFListe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ddingElementToOurList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFListe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ddingElementToOurList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFListe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ddingElementToOurList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFListe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ddingElementToOurList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFListe().setVisible(true);
+                new ddingElementToOurList().setVisible(true);
             }
         });
     }
