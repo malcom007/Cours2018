@@ -5,20 +5,40 @@
  */
 package listofelement;
 
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author mk
  */
 public class ddingElementToOurList extends javax.swing.JFrame {
-
+    
+    
+    //On crée une liste qui nous permettra de rendre notre liste dynamique
+    private DefaultListModel mCourriel = new DefaultListModel();
+        
+    
     /**
      * Creates new form JFListe
      */
     public ddingElementToOurList() {
+        mCourriel.addElement("mail1@msn.com");
+        mCourriel.addElement("mail2@msn.com");
+        mCourriel.addElement("mail3@msn.com");
+        mCourriel.addElement("mail4@msn.com");
+        mCourriel.addElement("thismail@msn.com");
         initComponents();
         
-        //On ajoute le ce code pour recuperer la valeur selectionné par default
-        JLAffiche.setText("Vous avez selectioné: "+MaListe.getSelectedValue());
+        
+        //Permet de connaitre le nombre d'élément dans la liste
+        JNombreElement.setText("Nombre d'élément dans la liste: "+MaListe1.getModel().getSize());
+        
+        //Condition qui si la liste n'est pas vide
+        if (MaListe1.getModel().getSize()>0) {
+            MaListe1.setSelectedIndex(0);
+            JLAffiche.setText("Vous avez selectionné "+MaListe1.getSelectedValue());
+            
+        }
     }
 
     /**
@@ -30,33 +50,56 @@ public class ddingElementToOurList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        JCenterPanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        MaListe = new javax.swing.JList<>();
+        JNordPanel = new javax.swing.JPanel();
+        jInputAdress = new javax.swing.JTextField();
+        JCenterPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        MaListe1 = new javax.swing.JList<>();
+        JEastPanel = new javax.swing.JPanel();
+        Ajouter1 = new javax.swing.JButton();
         JSouthPanel = new javax.swing.JPanel();
         JLAffiche = new javax.swing.JLabel();
-        Ajouter = new javax.swing.JButton();
+        JNombreElement = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(700, 400));
+        getContentPane().setLayout(new java.awt.BorderLayout(5, 5));
 
-        MaListe.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "adresse1@hotmail.com", "adresse2@gmail.com", "adresse3@yahoo.com", "adresse4@caramail.com", "adresse5@mk.com" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        MaListe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        MaListe.setPreferredSize(new java.awt.Dimension(350, 200));
-        MaListe.setSelectedIndex(0);
-        MaListe.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+        jInputAdress.setPreferredSize(new java.awt.Dimension(300, 35));
+        JNordPanel.add(jInputAdress);
+
+        getContentPane().add(JNordPanel, java.awt.BorderLayout.NORTH);
+
+        JCenterPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        JCenterPanel1.setPreferredSize(new java.awt.Dimension(300, 150));
+
+        MaListe1.setModel(mCourriel);
+        MaListe1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        MaListe1.setPreferredSize(new java.awt.Dimension(350, 200));
+        MaListe1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                MaListeValueChanged(evt);
+                MaListe1ValueChanged(evt);
             }
         });
-        jScrollPane1.setViewportView(MaListe);
+        jScrollPane2.setViewportView(MaListe1);
 
-        JCenterPanel.add(jScrollPane1);
+        JCenterPanel1.add(jScrollPane2);
 
-        getContentPane().add(JCenterPanel, java.awt.BorderLayout.CENTER);
+        getContentPane().add(JCenterPanel1, java.awt.BorderLayout.CENTER);
+
+        JEastPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        JEastPanel.setPreferredSize(new java.awt.Dimension(120, 135));
+
+        Ajouter1.setText("Ajouter");
+        Ajouter1.setPreferredSize(new java.awt.Dimension(97, 45));
+        Ajouter1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ajouter1ActionPerformed(evt);
+            }
+        });
+        JEastPanel.add(Ajouter1);
+
+        getContentPane().add(JEastPanel, java.awt.BorderLayout.EAST);
 
         JSouthPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
         JSouthPanel.setPreferredSize(new java.awt.Dimension(163, 135));
@@ -64,28 +107,23 @@ public class ddingElementToOurList extends javax.swing.JFrame {
 
         JLAffiche.setText("Selectionnez un element");
         JSouthPanel.add(JLAffiche);
-
-        Ajouter.setText("Ajouter");
-        Ajouter.setPreferredSize(new java.awt.Dimension(97, 30));
-        Ajouter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AjouterActionPerformed(evt);
-            }
-        });
-        JSouthPanel.add(Ajouter);
+        JSouthPanel.add(JNombreElement);
 
         getContentPane().add(JSouthPanel, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MaListeValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_MaListeValueChanged
-        JLAffiche.setText("Vous avez selectioné: "+MaListe.getSelectedValue());
-    }//GEN-LAST:event_MaListeValueChanged
+    private void MaListe1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_MaListe1ValueChanged
+        JLAffiche.setText("Vous avez selectioné: "+MaListe1.getSelectedValue());
+    }//GEN-LAST:event_MaListe1ValueChanged
 
-    private void AjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjouterActionPerformed
-        
-    }//GEN-LAST:event_AjouterActionPerformed
+    private void Ajouter1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ajouter1ActionPerformed
+        mCourriel.addElement(jInputAdress.getText());        
+        jInputAdress.setText("");
+        //Nombre Element
+        JNombreElement.setText("Nombre d'élément dans la liste: "+MaListe1.getModel().getSize());
+    }//GEN-LAST:event_Ajouter1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,11 +162,15 @@ public class ddingElementToOurList extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Ajouter;
-    private javax.swing.JPanel JCenterPanel;
+    private javax.swing.JButton Ajouter1;
+    private javax.swing.JPanel JCenterPanel1;
+    private javax.swing.JPanel JEastPanel;
     private javax.swing.JLabel JLAffiche;
+    private javax.swing.JLabel JNombreElement;
+    private javax.swing.JPanel JNordPanel;
     private javax.swing.JPanel JSouthPanel;
-    private javax.swing.JList<String> MaListe;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList<String> MaListe1;
+    private javax.swing.JTextField jInputAdress;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
