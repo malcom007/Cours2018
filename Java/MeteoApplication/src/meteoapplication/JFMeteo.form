@@ -96,18 +96,24 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="Reset">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Reset"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResetActionPerformed"/>
-      </Events>
+    <Container class="javax.swing.JPanel" name="EastSection">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
           <BorderConstraints direction="East"/>
         </Constraint>
       </Constraints>
-    </Component>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="Reset">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Reset"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResetActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

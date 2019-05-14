@@ -5,6 +5,8 @@
  */
 package meteoapplication;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author mk
@@ -34,6 +36,7 @@ public class JFMeteo extends javax.swing.JFrame {
         Neige = new javax.swing.JRadioButton();
         CenterSection = new javax.swing.JPanel();
         JLmonResult = new javax.swing.JLabel();
+        EastSection = new javax.swing.JPanel();
         Reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -81,24 +84,26 @@ public class JFMeteo extends javax.swing.JFrame {
                 ResetActionPerformed(evt);
             }
         });
-        getContentPane().add(Reset, java.awt.BorderLayout.EAST);
+        EastSection.add(Reset);
+
+        getContentPane().add(EastSection, java.awt.BorderLayout.EAST);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void NuageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuageActionPerformed
-            JLmonResult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meteoapplication/img/nuage.png")));
+            JLmonResult.setIcon(new ImageIcon(getClass().getResource("/meteoapplication/img/nuage.png")));
             JLmonResult.setText("");
         
     }//GEN-LAST:event_NuageActionPerformed
 
     private void SoleilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SoleilActionPerformed
-        JLmonResult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meteoapplication/img/soleil.png")));
+        JLmonResult.setIcon(new ImageIcon(getClass().getResource("/meteoapplication/img/soleil.png")));
         JLmonResult.setText("");
     }//GEN-LAST:event_SoleilActionPerformed
 
     private void NeigeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NeigeActionPerformed
-        JLmonResult.setIcon(new javax.swing.ImageIcon(getClass().getResource("/meteoapplication/img/neige.png")));
+        JLmonResult.setIcon(new ImageIcon(getClass().getResource("/meteoapplication/img/neige.png")));
         JLmonResult.setText("");
     }//GEN-LAST:event_NeigeActionPerformed
 
@@ -148,6 +153,7 @@ public class JFMeteo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CenterSection;
+    private javax.swing.JPanel EastSection;
     private javax.swing.ButtonGroup GroupeTemp;
     private javax.swing.JLabel JLmonResult;
     private javax.swing.JRadioButton Neige;
