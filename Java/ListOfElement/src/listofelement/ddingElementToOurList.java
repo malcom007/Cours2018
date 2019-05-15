@@ -35,6 +35,7 @@ public class ddingElementToOurList extends javax.swing.JFrame {
         
         //Condition qui si la liste n'est pas vide
         if (MaListe1.getModel().getSize()>0) {
+            
             MaListe1.setSelectedIndex(0);
             JLAffiche.setText("Vous avez selectionné "+MaListe1.getSelectedValue());
             
