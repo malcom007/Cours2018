@@ -39,12 +39,12 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
+        Fichier = new javax.swing.JMenu();
         jSaisirNom = new javax.swing.JMenuItem();
         jChoisirNom = new javax.swing.JMenuItem();
         jOuvrirNom = new javax.swing.JMenuItem();
         jQuitter = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        Editer = new javax.swing.JMenu();
         jCouleurFond = new javax.swing.JMenuItem();
         jCouleurText = new javax.swing.JMenuItem();
 
@@ -81,8 +81,8 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jMenu3.setMnemonic('F');
-        jMenu3.setText("Fichier");
+        Fichier.setMnemonic('F');
+        Fichier.setText("Fichier");
 
         jSaisirNom.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         jSaisirNom.setMnemonic('S');
@@ -92,7 +92,7 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 jSaisirNomActionPerformed(evt);
             }
         });
-        jMenu3.add(jSaisirNom);
+        Fichier.add(jSaisirNom);
 
         jChoisirNom.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jChoisirNom.setMnemonic('n');
@@ -102,7 +102,7 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 jChoisirNomActionPerformed(evt);
             }
         });
-        jMenu3.add(jChoisirNom);
+        Fichier.add(jChoisirNom);
 
         jOuvrirNom.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
         jOuvrirNom.setMnemonic('O');
@@ -112,7 +112,7 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 jOuvrirNomActionPerformed(evt);
             }
         });
-        jMenu3.add(jOuvrirNom);
+        Fichier.add(jOuvrirNom);
 
         jQuitter.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
         jQuitter.setMnemonic('Q');
@@ -122,12 +122,12 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 jQuitterActionPerformed(evt);
             }
         });
-        jMenu3.add(jQuitter);
+        Fichier.add(jQuitter);
 
-        jMenuBar2.add(jMenu3);
+        jMenuBar2.add(Fichier);
 
-        jMenu4.setMnemonic('E');
-        jMenu4.setText("Editer");
+        Editer.setMnemonic('E');
+        Editer.setText("Editer");
 
         jCouleurFond.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
         jCouleurFond.setMnemonic('F');
@@ -137,7 +137,7 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 jCouleurFondActionPerformed(evt);
             }
         });
-        jMenu4.add(jCouleurFond);
+        Editer.add(jCouleurFond);
 
         jCouleurText.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_MASK));
         jCouleurText.setMnemonic('T');
@@ -147,9 +147,9 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
                 jCouleurTextActionPerformed(evt);
             }
         });
-        jMenu4.add(jCouleurText);
+        Editer.add(jCouleurText);
 
-        jMenuBar2.add(jMenu4);
+        jMenuBar2.add(Editer);
 
         setJMenuBar(jMenuBar2);
 
@@ -196,6 +196,7 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
        
         String nomImage = JOptionPane.showInputDialog("Nom du fichier de l'image :");
         jLabel2.setText(nomImage);
+        JOptionPane.showMessageDialog(this, nomImage);
     }//GEN-LAST:event_jSaisirNomActionPerformed
 
     //sélecteur de couleur
@@ -269,13 +270,13 @@ public class DjfmDialogue1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Editer;
+    private javax.swing.JMenu Fichier;
     private javax.swing.JMenuItem jChoisirNom;
     private javax.swing.JMenuItem jCouleurFond;
     private javax.swing.JMenuItem jCouleurText;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jOuvrirNom;
     private javax.swing.JPanel jPanel1;
