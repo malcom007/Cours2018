@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package evaluation2;
+package Exceptions;
 
 /**
  *
  * @author mk
  */
-public class finArticle extends Exception {
+public class LoginInvalidException extends Exception {
 
-    public finArticle(String msg) {
-        super(msg);
+    public LoginInvalidException(String msg) {
+        System.out.println(msg);
     }
     
 }

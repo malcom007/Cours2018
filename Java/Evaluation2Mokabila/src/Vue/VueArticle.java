@@ -3,16 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package evaluation2;
+package Vue;
 
+import java.util.Observable;
+import java.util.Observer;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
  * @author mk
  */
-public class VueArticle extends javax.swing.JFrame {
+public class VueArticle extends javax.swing.JFrame implements Observer{
 
+    
+    
     /**
      * Creates new form VueArticle
      */
@@ -61,7 +68,6 @@ public class VueArticle extends javax.swing.JFrame {
         setTitle("Table Article");
         setBounds(new java.awt.Rectangle(0, 23, 700, 700));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(700, 700));
         setResizable(false);
 
         jPMain.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -316,6 +322,143 @@ public class VueArticle extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBtnAnnulerActionPerformed
 
+    public int getDernierPosition() {
+        return dernierPosition;
+    }
+
+    public void setDernierPosition(int dernierPosition) {
+        this.dernierPosition = dernierPosition;
+    }
+
+    public JButton getjBtnAjout() {
+        return jBtnAjout;
+    }
+
+
+    public JButton getjBtnAnnuler() {
+        return jBtnAnnuler;
+    }
+
+
+
+    public JButton getjBtnDernier() {
+        return jBtnDernier;
+    }
+
+
+
+    public JButton getjBtnModifier() {
+        return jBtnModifier;
+    }
+
+
+
+    public JButton getjBtnNouveau() {
+        return jBtnNouveau;
+    }
+
+
+
+    public JButton getjBtnPrecedent() {
+        return jBtnPrecedent;
+    }
+
+
+
+    public JButton getjBtnPremier() {
+        return jBtnPremier;
+    }
+
+  
+
+    public JButton getjBtnSuivant() {
+        return jBtnSuivant;
+    }
+
+  
+
+    public JButton getjBtnSupprimer() {
+        return jBtnSupprimer;
+    }
+
+  
+
+    public JLabel getjLCodeArticle() {
+        return jLCodeArticle;
+    }
+
+    public void setjLCodeArticle(JLabel jLCodeArticle) {
+        this.jLCodeArticle = jLCodeArticle;
+    }
+
+    public JLabel getjLCodeCategorie() {
+        return jLCodeCategorie;
+    }
+
+    public void setjLCodeCategorie(JLabel jLCodeCategorie) {
+        this.jLCodeCategorie = jLCodeCategorie;
+    }
+
+    public JLabel getjLDesignation() {
+        return jLDesignation;
+    }
+
+    public void setjLDesignation(JLabel jLDesignation) {
+        this.jLDesignation = jLDesignation;
+    }
+
+    public JLabel getjLMessage() {
+        return jLMessage;
+    }
+
+    public void setjLMessage(JLabel jLMessage) {
+        this.jLMessage = jLMessage;
+    }
+
+    public JLabel getjLPrixUnit() {
+        return jLPrixUnit;
+    }
+
+    public void setjLPrixUnit(JLabel jLPrixUnit) {
+        this.jLPrixUnit = jLPrixUnit;
+    }
+
+    public JTextField getjTxtCodeArticle() {
+        return jTxtCodeArticle;
+    }
+
+    public void setjTxtCodeArticle(JTextField jTxtCodeArticle) {
+        this.jTxtCodeArticle = jTxtCodeArticle;
+    }
+
+    public JTextField getjTxtCodeCategorie() {
+        return jTxtCodeCategorie;
+    }
+
+    public void setjTxtCodeCategorie(JTextField jTxtCodeCategorie) {
+        this.jTxtCodeCategorie = jTxtCodeCategorie;
+    }
+
+    public JTextField getjTxtDesignation() {
+        return jTxtDesignation;
+    }
+
+    public void setjTxtDesignation(JTextField jTxtDesignation) {
+        this.jTxtDesignation = jTxtDesignation;
+    }
+
+    public JTextField getjTxtPrixUnit() {
+        return jTxtPrixUnit;
+    }
+
+    public void setjTxtPrixUnit(JTextField jTxtPrixUnit) {
+        this.jTxtPrixUnit = jTxtPrixUnit;
+    }
+
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -377,4 +520,9 @@ public class VueArticle extends javax.swing.JFrame {
     private javax.swing.JTextField jTxtDesignation;
     private javax.swing.JTextField jTxtPrixUnit;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void update(Observable o, Object arg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

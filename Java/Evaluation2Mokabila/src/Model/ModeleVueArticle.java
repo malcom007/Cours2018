@@ -3,17 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package evaluation2;
+package Model;
 
+import Exceptions.AucunDonnee;
+import Vue.HeureSystem;
+import Exceptions.finArticle;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.sql.PreparedStatement;
+import java.util.Observable;
 
 /**
  *
  * @author mk
  */
-public class ModeleVueArticle {
+public class ModeleVueArticle extends Observable{
 
     private static final String hote = "jdbc:derby://localhost:1527/Cohorte384";
     private static final String usager = "malcom007";
@@ -61,6 +65,30 @@ public class ModeleVueArticle {
             testConnexion = false;
         }
         return myConnection;
+    }
+    
+    public void getFirstArticle() throws SQLException{
+        getDBConnection();
+        
+        rS= prepareStatementQuery("Select * from Article");
+        
+        
+        
+        
+        
+    }
+    /***
+     * Medhode permettant d'envoyer des requette de type Select 
+     * Pour le ResultSet
+     * @param SQL_SELECT
+     * @return
+     * @throws SQLException 
+     */
+    private ResultSet prepareStatementQuery(String SQL_SELECT) throws SQLException{
+        
+        preparedStatementInsert = myConnection.prepareStatement(SQL_SELECT);
+        
+        return preparedStatementInsert.executeQuery();
     }
 
     /**
@@ -112,7 +140,7 @@ public class ModeleVueArticle {
     }
 
     public void getAllArticles() throws Exception {
-        try {
+        
             myConnection = getDBConnection();
 
             stmt = (Statement) myConnection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
@@ -130,28 +158,28 @@ public class ModeleVueArticle {
                 
             }
             
-            while (rS.previous()) {
-                System.out.println("avant dernier article "+rS.getString(2)+" "+rS.getString(5));
-            }
-            
-
-            System.out.println("\nDeconnexiont à la BD à  " + getCurrentTimeStamp() + "\n");
-
-            if (!rS.previous()) {
-                throw new finArticle("Vous êtes au premier article !");
-            }
-            
-            
-            
-            
-
-        } catch (SQLException e) {
-            e.getMessage();
-        }
-
+//            while (rS.previous()) {
+//                System.out.println("avant dernier article "+rS.getString(2)+" "+rS.getString(5));
+//            }
+//            
+//
+//            
+//
+//            if (!rS.previous()) {
+//                throw new finArticle("Vous êtes au premier article !");
+//            }
     }
+            
+            
+            
+            
 
-    public void createTableCategorie() throws SQLException {
+        
+
+    
+
+    
+public void createTableCategorie() throws SQLException {
         //Connection a la base de données
         myConnection = getDBConnection();
 
@@ -322,8 +350,6 @@ public class ModeleVueArticle {
 
     }
 
-    private Exception lastRcord(String il_ny_a_plus_de_donné_a_afficher) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  
 
 }

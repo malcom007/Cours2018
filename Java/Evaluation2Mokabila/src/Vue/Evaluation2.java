@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package evaluation2;
+package Vue;
 
+import Exceptions.AucunDonnee;
+import Exceptions.finArticle;
+import Model.ModeleVueArticle;
 import java.sql.SQLException;
 
 /**
@@ -21,26 +24,26 @@ public class Evaluation2 {
         ModeleVueArticle myConnexion = new ModeleVueArticle();
         
         
+        
         /*new VueArticle().setVisible(true);*/
-        String codeArticle =" 269", designation="Produit new ", codeCategorie="CAT01";
-        double prix = 27.58;
+        String codeArticle =" 007", designation="Galaxy S9 ", codeCategorie="CAT01";
+        double prix = 795.58;
         
         try {
             
-            //myConnexion.setArticle(codeArticle, designation, codeCategorie, prix);
+            myConnexion.setArticle(codeArticle, designation, codeCategorie, prix);
             myConnexion.getAllArticles();
             
           
             
                 
         }
-//        catch(AucunDonnee e){
-//            System.out.println(e.getMessage());
-//            
-//        }
-        
-        catch(finArticle e){
+        catch(AucunDonnee e){
             System.out.println(e.getMessage());
+            
+        } 
+        catch(finArticle d){
+            System.out.println(d.getMessage());
         }
         catch (Exception e) {
         }
