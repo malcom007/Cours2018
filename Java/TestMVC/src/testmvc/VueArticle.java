@@ -334,6 +334,9 @@ public class VueArticle extends JFrame implements Observer{
     private javax.swing.JPanel top;
     // End of variables declaration//GEN-END:variables
 
+    
+    //La methode update recupere le resultat du model quand il est notifié par 
+    // le model
     @Override
     public void update(java.util.Observable o, Object obj) {
          String codeArt     = ((Article)obj).getCodeArticle();

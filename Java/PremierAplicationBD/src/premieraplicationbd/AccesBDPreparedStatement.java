@@ -43,13 +43,13 @@ public class AccesBDPreparedStatement {
         myConnection = getConnection();
 
         
-        sqlc = "Select * from Etudiant where numetudiant=?";
+        sqlc = "Select * from Article";
         
         int trouveCount = 0;
         
         pstmt = myConnection.prepareStatement(sqlc);
         
-        pstmt.setInt(1, id);
+        
         
         rS = pstmt.executeQuery();
         

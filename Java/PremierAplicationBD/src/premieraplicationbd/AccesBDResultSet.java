@@ -45,7 +45,7 @@ public class AccesBDResultSet {
             //TYPE_SCROLL_SENSITIVE permet d'avancer et de reculler
             //CONCUR_UPDATABLE 
             stmt = (Statement) myConnection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            sqlc = "Select * from Etudiant";
+            sqlc = "Select * from art";
             rS = stmt.executeQuery(sqlc);
             while (rS.next()) {
                 System.out.println(rS.getString(2));

@@ -25,9 +25,10 @@ public class Main {
         try {
             
             
-            myConnexion.setEtudiantResultSet(85, "Jean", 15, 285);
+            //myConnexion.setEtudiantResultSet(85, "Jean", 15, 285);
 //            System.out.println("Insertion completé");
-            myConnexion.getEtudiantsIf(85);
+            //myConnexion.getEtudiantsIf(85);
+            myConnexionPreparedStatement.getEtudiantsIf(0);
             
 //            System.out.println("\n**** Avec PreparedStatement****\n");
 //            myConnexionPreparedStatement.getEtudiantsIf(1001);
